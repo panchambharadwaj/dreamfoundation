@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single">
+    <group android:id="@+id/core">
         <item
             android:id="@+id/nav_present_activities"
             android:icon="@drawable/ic_action_event"
-            android:title="Present Activities" />
-        <item
-            android:id="@+id/nav_announcements"
-            android:icon="@drawable/ic_action_new_event"
-            android:title="Announcements" />
+            android:title="Activities" />
         <item
             android:id="@+id/nav_reports"
             android:icon="@drawable/ic_action_copy"
@@ -19,9 +15,9 @@
             android:icon="@drawable/ic_action_view_as_list"
             android:title="Newsletters" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_announcements"
+            android:icon="@drawable/ic_action_new_event"
+            android:title="Announcements" />
         <item
             android:id="@+id/nav_blood_requirement"
             android:icon="@drawable/ic_action_favorite"
@@ -30,18 +26,39 @@
             android:id="@+id/nav_funds_in_hand"
             android:icon="@drawable/ic_action_good"
             android:title="Funds In Hand" />
+    </group>
+
+    <item android:title="Gallery">
+        <menu>
+            <item
+                android:id="@+id/nav_pictures"
+                android:title="Pictures"
+                android:icon="@drawable/ic_action_picture"/>
+            <item
+                android:id="@+id/nav_videos"
+                android:title="Videos"
+                android:icon="@drawable/ic_action_video"/>
+        </menu>
+    </item>
+
+    <group android:id="@+id/help_join">
+
         <item
             android:id="@+id/nav_help_us_raise_funds"
             android:icon="@drawable/ic_action_help"
             android:title="Help Us Raise Funds" />
         <item
-            android:id="@+id/nav_archives"
-            android:icon="@drawable/ic_action_collection"
-            android:title="Archives" />
-        <item
             android:id="@+id/nav_join_dream"
             android:icon="@drawable/ic_action_group"
             android:title="Join DREAM" />
+
+    </group>
+
+    <group android:id="@+id/archives_contact">
+        <item
+            android:id="@+id/nav_archives"
+            android:icon="@drawable/ic_action_collection"
+            android:title="Archives" />
         <item
             android:id="@+id/nav_contact_us"
             android:icon="@drawable/ic_action_phone"

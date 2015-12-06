@@ -31,15 +31,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -55,16 +46,12 @@ public class MainActivity extends AppCompatActivity
         webSettings.setJavaScriptEnabled(true);
 
         // Improve WebView performance
-        mwebView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH);
-        mwebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        mwebView.getSettings().setAppCacheEnabled(true);
+//        mwebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         mwebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        webSettings.setDomStorageEnabled(true);
+//        webSettings.setDomStorageEnabled(true);
         webSettings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.NARROW_COLUMNS);
         webSettings.setUseWideViewPort(true);
-        webSettings.setSavePassword(true);
-        webSettings.setSaveFormData(true);
-        webSettings.setEnableSmoothTransition(true);
+//        webSettings.setSaveFormData(true);
 
         mwebView.loadUrl("https://drive.google.com/open?id=1UDD13pyoeXh66f31BCAUOfAxhvj6Uqa3nUg3WWX1gho");
         Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
@@ -128,13 +115,17 @@ public class MainActivity extends AppCompatActivity
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-fi1QODhSekhDMW9GVHd4VXBWTWFHTC1mb3l6T1pwZ1F6QzliNUgyckJxQzA");
             Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_pictures) {
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-dEt1cWhwZG9ybXc");
             Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
-        } else if (id == R.id.nav_blood_requirement) {
-            mwebView.loadUrl("https://drive.google.com/open?id=1eY3xt39qMTmdPYQyXNn5eTU9v0EdEIbOA09fn1I1QIA");
+        } else if (id == R.id.nav_videos) {
+            mwebView.loadUrl("https://www.youtube.com/channel/UCFOXHiXLdayEMoCVkAJyfyQ/videos");
             Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
+
+        } else if (id == R.id.nav_blood_requirement) {
+          mwebView.loadUrl("https://drive.google.com/open?id=1eY3xt39qMTmdPYQyXNn5eTU9v0EdEIbOA09fn1I1QIA");
+          Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_funds_in_hand) {
             mwebView.loadUrl("https://drive.google.com/open?id=1RhjxLIhnmUSXDNwdgCd4rwDjp5tdeXUOU6jwp0ziEGE");
