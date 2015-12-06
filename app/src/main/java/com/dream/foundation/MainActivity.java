@@ -17,23 +17,16 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
-import com.parse.Parse;
-import com.parse.ParseInstallation;
-
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     // Initializing WebView
     private WebView mwebView;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -55,8 +48,6 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-
 
         // WebView
         mwebView = (WebView) findViewById(R.id.myWebView);
@@ -80,9 +71,6 @@ public class MainActivity extends AppCompatActivity
 
         // Force links to open in WebView
         mwebView.setWebViewClient(new MyWebviewClient());
-
-        Parse.initialize(this, "Ywysm8kA3v3X8mwwlbaAwPBF2uWJCzb9SmgtDYQ8", "vDyCPRai2pmLIRfqY8Ygjhpjtaj2UJGi0NQ0Lmlu");
-        ParseInstallation.getCurrentInstallation().saveInBackground();
 
     }
 
@@ -183,7 +171,6 @@ public class MainActivity extends AppCompatActivity
             Uri.parse(url).getHost();
             return false;
         }
-
     }
     // Goto previous page when pressing back button
     @Override
