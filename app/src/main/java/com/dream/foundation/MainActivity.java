@@ -1,25 +1,21 @@
 package com.dream.foundation;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.KeyEvent;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.parse.Parse;
 import com.parse.ParseInstallation;
@@ -80,6 +76,7 @@ public class MainActivity extends AppCompatActivity
         webSettings.setEnableSmoothTransition(true);
 
         mwebView.loadUrl("https://drive.google.com/open?id=1UDD13pyoeXh66f31BCAUOfAxhvj6Uqa3nUg3WWX1gho");
+        Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         // Force links to open in WebView
         mwebView.setWebViewClient(new MyWebviewClient());
@@ -130,35 +127,46 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_present_activities) {
             // Handle the camera action
             mwebView.loadUrl("https://drive.google.com/open?id=1wj_JfaxFDQvfpSg0WSMLkcBhoZmlrI3hZYuwPMlN-JM");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
         } else if (id == R.id.nav_announcements) {
             mwebView.loadUrl("https://drive.google.com/open?id=1kDMyDmOIl5Za2KqjQYEeWpdmpfuAJGOFarJrTMBPAQk");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_reports) {
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-ekJyNUJrclpHbmM");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_newsletters) {
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-fi1QODhSekhDMW9GVHd4VXBWTWFHTC1mb3l6T1pwZ1F6QzliNUgyckJxQzA");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_gallery) {
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-dEt1cWhwZG9ybXc");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_blood_requirement) {
             mwebView.loadUrl("https://drive.google.com/open?id=1eY3xt39qMTmdPYQyXNn5eTU9v0EdEIbOA09fn1I1QIA");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_funds_in_hand) {
             mwebView.loadUrl("https://drive.google.com/open?id=1RhjxLIhnmUSXDNwdgCd4rwDjp5tdeXUOU6jwp0ziEGE");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_help_us_raise_funds) {
             mwebView.loadUrl("https://drive.google.com/open?id=1yOMYzEe6Q3v_X98-z5ULnDU9irg547Q_y-LdSbWofs0");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_archives) {
             mwebView.loadUrl("https://drive.google.com/open?id=0B-cp181SxR7-fkdENkZqX3p1YjVIX1pnSm1Oa2M1TEVGalFQX18tWTZaZXlYQ21TM1MtWmc");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_join_dream) {
             mwebView.loadUrl("https://drive.google.com/open?id=1GRxMAivEtEKYPrmADBjpbNpYNxr0khpOp1d1dA05e7A");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         } else if (id == R.id.nav_contact_us) {
             mwebView.loadUrl("https://drive.google.com/open?id=18astFbR3KbuBgpn5RzieKiV60OZiyU24aMnJ_Ye6VGY");
+            Toast.makeText(getApplicationContext(), "Loading... Please wait!", Toast.LENGTH_LONG).show();
 
         }
 
