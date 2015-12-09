@@ -14,5 +14,8 @@ public class Parse extends Application {
 
         com.parse.Parse.initialize(this, "Ywysm8kA3v3X8mwwlbaAwPBF2uWJCzb9SmgtDYQ8", "vDyCPRai2pmLIRfqY8Ygjhpjtaj2UJGi0NQ0Lmlu");
         ParseInstallation.getCurrentInstallation().saveInBackground();
+
+
     }
+
 }
